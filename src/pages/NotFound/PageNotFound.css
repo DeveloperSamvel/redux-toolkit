@@ -1,0 +1,24 @@
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+.not-found-h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 1;
+}
+
+.not-found-p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.not-found-i {
+    color: #666;
+}
