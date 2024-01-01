@@ -1,19 +1,12 @@
-import { useDispatch } from 'react-redux';
-import { logOutUser } from '../../redux/auth/authReducer';
+import useLogout from '../../hooks/useLogout';
 
 const ServicesPage = () => {
-    const dispatch = useDispatch();
+    const handleLogOutUser = useLogout();
 
-    const handleLogOutUser = () => {
-        localStorage.removeItem("loggedIn");
-        dispatch(logOutUser());
-    }
-
-    console.log("test services");
     return (
         <>
             <div>ServicesPage</div>
-            <button onClick={() => handleLogOutUser()}>Log Out</button>
+            <button onClick={handleLogOutUser}>Log Out</button>
         </>
     )
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { signInUser } from '../../redux/auth/authReducer';
+import { signInUser } from '../../store/auth/authReducer';
 
 const LoginPage = () => {
     const [login, setLogin] = useState("");
@@ -9,11 +9,9 @@ const LoginPage = () => {
 
     const handleSignInUser = () => {
         if(login === "samvel" && password === "123456") {
-            localStorage.setItem("loggedIn", 1);
-            dispatch(signInUser());
+            dispatch(signInUser({userId: "48488468748484484"}));
         }
     }
-
 
     return (
         <>
