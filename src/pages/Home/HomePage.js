@@ -1,13 +1,11 @@
-import useLogout from '../../hooks/useLogout';
+import HomeLayout from '../../layouts/Home/HomeLayout';
+import HomeContent from '../../components/HomeContent/HomeContent.component';
 
 const HomePage = () => {
-    const handleLogOutUser = useLogout();
-
     return (
-        <>
-            <div>HomePage</div>
-            <button onClick={() => handleLogOutUser()}>Log Out</button>
-        </>
+        <HomeLayout>
+            <HomeContent />
+        </HomeLayout>
     )
 }
 

@@ -5,7 +5,6 @@ const ProtectedRoute = () => {
     const location = useLocation();
     const { isLogged } = useSelector((state) => state.auth);
 
-    console.log("isLogged", isLogged);
     if(location.pathname === "/login") {
         if(isLogged) {
             return <Navigate to="/" />;

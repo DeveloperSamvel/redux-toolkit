@@ -1,17 +1,12 @@
-import { useLocation } from 'react-router-dom';
-import "./PageNotFound.css";
+import NotFoundLayout from '../../layouts/NotFound/NotFoundLayout';
+import NotFoundContent from '../../components/NotFoundContent/NotFoundContent.component';
 
-function PageNotFound() {
-    let location = useLocation().pathname;
-
+const PageNotFound = () => {
     return (
-        <div className='not-found-container'>
-            <h1 className='not-found-h1'>404</h1>
-            <p className='not-found-p'>
-                There is no doc for <i className='not-found-i'>{location}</i>
-            </p>
-        </div>
-    );
+        <NotFoundLayout>
+            <NotFoundContent />
+        </NotFoundLayout>
+    )
 }
 
 export default PageNotFound;

@@ -4,7 +4,7 @@ import LoginPage from './pages/Login/LoginPage';
 import HomePage from './pages/Home/HomePage';
 import ServicesPage from './pages/Services/ServicesPage';
 import PageNotFound from './pages/NotFound/PageNotFound';
-import ProtectedRoute from './routes/ProtectedRoute';
+import ProtectedRoute from './pages/ProtectedRoute';
 
 const App = () => {
     return (
@@ -14,6 +14,7 @@ const App = () => {
                     <Route index element={<HomePage />} />
                     <Route path="login" element={<LoginPage />} />
                     <Route path="services" element={<ServicesPage />} />
+                    {/* <Route path="services/:id" element={<ServicesPage />} /> */}
                 </Route>
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
