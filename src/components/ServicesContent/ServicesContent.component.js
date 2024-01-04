@@ -1,6 +1,6 @@
 import Service from "./Service";
 
-const ServicesPage = ({
+const ServicesContent = ({
   services,
   addService,
   editService,
@@ -33,4 +33,4 @@ const ServicesPage = ({
   );
 };
 
-export default ServicesPage;
+export default ServicesContent;

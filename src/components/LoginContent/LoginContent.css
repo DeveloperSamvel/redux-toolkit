@@ -1,0 +1,95 @@
+#login-form-root{
+  background: #d3edce3d;
+  overflow: hidden;
+  height: 96vh;
+}
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.wrapper{
+  max-width: 376px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 20px 50px 18px rgba(0,0,0,0.1);
+  padding: 2rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrapper .title {
+  height: 4.5rem;
+  background: #d3edce3d;
+  border-radius: 5px 5px 0 0;
+  color: #1d1d1d;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .form{
+  padding: 2rem 0.5rem 1rem 0.5rem;
+}
+.wrapper .form .row{
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.wrapper .form .row input{
+  all: unset;
+  height: 100%;
+  width: calc(100% - 4px - 4rem);
+  outline: none;
+  padding-left: 4rem;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 2px 2px white inset;
+}
+.form .row input:autofill,
+.form .row input:-internal-autofill-selected {
+  background-color: red !important;
+  box-shadow: 0px 0px 0px 50px white inset;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+.form .row input::placeholder{
+  color: #999;
+}
+.wrapper .form .row i,
+.wrapper .form .row .svg-container{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #d3edce;
+  border: 1px solid #d3edce85;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .form .button {
+  color: #1d1d1d;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  padding-left: 0px;
+  background: #d3edce;
+  border-radius: 5px;
+  border: 1px solid #d3edce;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.form .button:hover{
+  color: #d3edce;
+  background: #16a085;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
