@@ -1,21 +1,16 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { signInUser } from "../../store/auth/authReducer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faUnlock } from "@fortawesome/free-solid-svg-icons";
 import "./LoginContent.css";
 
-const LoginContent = () => {
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
-  const dispatch = useDispatch();
-
-  const handleSignInUser = () => {
-    if (login === "samvel" && password === "123456") {
-      dispatch(signInUser({ userId: "48488468748484484" }));
-    }
-  };
+const LoginContent = ({
+  login,
+  password,
+  showPassword,
+  setLogin,
+  setPassword,
+  setShowPassword,
+  handleSignInUser,
+}) => {
 
   return (
     <div id="login-form-root">
