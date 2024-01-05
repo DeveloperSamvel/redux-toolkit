@@ -1,13 +1,13 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import ServicesContent from '../../components/ServicesContent/ServicesContent.component';
+import Footer from '../../layouts/Footer/Footer.component';
+import useLogout from '../../hooks/useLogout';
+import useServices from '../../hooks/useServices';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import useLogout from '../../hooks/useLogout';
-import ServicesContent from '../../components/ServicesContent/ServicesContent.component';
-import useServices from '../../hooks/useServices';
 
 import "./ServicesPage.css";
-
 
 
 function ServicesPage() {
@@ -50,6 +50,7 @@ function ServicesPage() {
               deleteService={deleteService}
               handleLogOutUser={handleLogOutUser}
           />
+          <Footer />
         </div>
       </div>
     </div>

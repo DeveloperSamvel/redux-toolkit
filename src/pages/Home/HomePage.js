@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import { Link } from 'react-router-dom';
 import HomeContent from "../../components/HomeContent/HomeContent.component";
+import Footer from "../../layouts/Footer/Footer.component";
 import useLogout from "../../hooks/useLogout";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
 import "./Homepage.css";
-
 
 
 function HomePage() {
@@ -42,6 +41,7 @@ function HomePage() {
         </div>
         <div className="homepage-box-content-body">
           <HomeContent />
+          <Footer />
         </div>
       </div>
     </div>
