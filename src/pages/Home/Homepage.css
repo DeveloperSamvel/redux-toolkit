@@ -25,6 +25,20 @@
 
 .homepage-menu-content-body {
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-log-out {
+  all: unset;
+  width: min-content;
+  display: flex;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 10px;
+  background-color: #16a085;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .homepage-box-content {
@@ -34,24 +48,26 @@
 .homepage-box-content-header {
   display: flex;
   align-items: center;
-  background-color: #2196f3;
-  color: white;
+  color: #16a085;
   height: calc(4rem - 4px);
   padding: 0 1.5rem;
   transition: margin-left 0.3s;
   transition: width 0.3s ease-in;
+  background: #d3edce3d;
 }
 
 .homepage-box-content-header-button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: #16a085;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
 .homepage-box-content-header-h1 {
-  padding-left: 0.6rem;
+  padding-left: 1.3rem;
+  flex-grow: 1;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
