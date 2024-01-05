@@ -1,14 +1,14 @@
-import useLogout from '../../hooks/useLogout';
+import Header from "../../layouts/Header/Header.component";
+import Footer from "../../layouts/Footer/Footer.component";
 
-const HomeContent = () => {
-    const handleLogOutUser = useLogout();
-
-    return (
-        <>
-            <div>HomePage</div>
-            <button onClick={() => handleLogOutUser()}>Log Out</button>
-        </>
-    )
-}
+const HomeContent = ({ handleLogOutUser }) => {
+  return (
+    <>
+      <Header handleLogOutUser={handleLogOutUser}></Header>
+      HomePage
+      <Footer />
+    </>
+  );
+};
 
 export default HomeContent;
