@@ -1,6 +1,4 @@
 import ServiceCard from './ServiceCard/ServiceCard';
-
-import Header from '../../layouts/Header/Header.component';
 import Footer from '../../layouts/Footer/Footer.component';
 
 const ServicesContent = ({
@@ -8,11 +6,9 @@ const ServicesContent = ({
   addService,
   editService,
   deleteService,
-  handleLogOutUser,
 }) => {
   return (
     <>
-      <Header handleLogOutUser={handleLogOutUser}></Header>
       <div className='container'>
         {
           services.length > 0 &&
