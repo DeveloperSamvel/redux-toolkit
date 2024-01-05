@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import "./Service.css";
-import ModalService from "./ModalService/ModalService.component";
+import "./ServiceCard.css";
+import ModalService from "../ModalService/ModalService.component";
 
 const ServiceCard = ({
   id,
