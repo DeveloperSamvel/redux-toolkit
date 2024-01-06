@@ -1,50 +1,16 @@
-import { useState } from "react";
-import { Link } from 'react-router-dom';
+import AdminLayout from "../../layouts/Admin/AdminLayout";
 import HomeContent from "../../components/HomeContent/HomeContent.component";
-import Footer from "../../layouts/Footer/Footer.component";
-import useLogout from "../../hooks/useLogout";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-import "./Homepage.css";
 
 
-function HomePage() {
-  const handleLogOutUser = useLogout();
-  const [open, setOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setOpen((prev) => !prev);
-  };
-
+function HomePage({ handleLogOutUser, open, toggleDrawer }) {
   return (
-    <div className="homepage-container">
-      <div className={`homepage-menu-content ${open ? "open" : ""}`}>
-        <div className="homepage-menu-content-header">
-          <h2 className="homepage-menu-content-header-h2">Drawer Menu</h2>
-        </div>
-        <div className="homepage-menu-content-body">
-          <Link to="/">Home</Link>
-          <Link to="/services">Services</Link>
-          <button className='homepage-log-out' onClick={handleLogOutUser}>
-            <FontAwesomeIcon icon={faRightFromBracket} />
-          </button>
-        </div>
-      </div>
-      <div className={`homepage-box-content ${open ? "open" : ""}`}>
-        <div className="homepage-box-content-header">
-          <button className="homepage-box-content-header-button" onClick={toggleDrawer}>
-            ☰
-          </button>
-          <h1 className="homepage-box-content-header-h1">
-            Welcome to Admin Page
-          </h1>
-        </div>
-        <div className="homepage-box-content-body">
-          <HomeContent />
-          <Footer />
-        </div>
-      </div>
-    </div>
+    <AdminLayout
+      handleLogOutUser={handleLogOutUser}
+      open={open}
+      toggleDrawer={toggleDrawer}
+    >
+      <HomeContent />
+    </AdminLayout>
   );
 }
 
