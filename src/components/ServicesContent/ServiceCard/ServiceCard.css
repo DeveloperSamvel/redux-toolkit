@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
-    margin: 32px 0;
 }
 .card {
     width: 25%;
@@ -57,7 +56,6 @@
 
 .card-footer .card-text {
     color: #1d1d1d;
-    font-family: Pt-Sans,Arial-AMU-Regular,Arial,sans-serif;
     font-size: 20px;
     font-weight: bold;
 }
