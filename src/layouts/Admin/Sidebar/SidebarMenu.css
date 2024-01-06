@@ -2,20 +2,29 @@
   width: 0;
   height: 100vh;
   overflow: hidden;
+  background: #fafdff;
+  box-shadow: 3px 0px 6px #d3edce;
   display: grid;
   grid-template-rows: min-content 1fr;
   transition: width 0.3s ease-in;
 }
 
 .sidebar-menu-header {
-  height: 64px;
+  height: 4rem;
   border-bottom: 1px solid #e0e0e0;
   padding-left: 2rem;
   display: grid;
   align-items: center;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem;
+}
+
+.sidebar-menu-header-logo {
+  width: 29px;
 }
 
 .sidebar-menu-header-h2 {
+  color: #1d1d1d;
   text-wrap: nowrap;
 }
 
@@ -39,6 +48,6 @@
 
 @media (min-width: 768px) {
   .sidebar-menu.open {
-    width: 320px;
+    width: 20rem;
   }
 }
