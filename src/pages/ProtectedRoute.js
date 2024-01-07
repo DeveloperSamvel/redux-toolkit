@@ -5,13 +5,14 @@ const ProtectedRoute = () => {
     const location = useLocation();
     const { isLogged } = useSelector((state) => state.auth);
 
-    if(location.pathname === "/login") {
-        if(isLogged) {
-            return <Navigate to="/" />;
+    console.log("isLogged", isLogged);
+    if(isLogged) {
+        if(location.pathname === "/" || location.pathname === "/login") {
+            return <Navigate to="/admin" />;
         }
     }
     else {
-        if(!isLogged) {
+        if(location.pathname === "/" || location.pathname.includes("admin")) {
             return <Navigate to="/login" />;
         }
     }

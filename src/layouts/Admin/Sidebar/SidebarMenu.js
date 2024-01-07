@@ -16,10 +16,10 @@ function SidebarMenu({ handleLogOutUser, open }) {
         <h2 className="sidebar-menu-header-h2">Admin Menu</h2>
       </div>
       <div className="sidebar-menu-body">
-        <Link className={`sidebar-menu-body-link ${location === "/" ? "active" : ""}`} to="/">
+        <Link className={`sidebar-menu-body-link ${location === "/admin" ? "active" : ""}`} to="/admin">
           Home
         </Link>
-        <Link className={`sidebar-menu-body-link ${location === "/services" ? "active" : ""}`} to="/services">
+        <Link className={`sidebar-menu-body-link ${location === "/admin/services" ? "active" : ""}`} to="/admin/services">
           Services
         </Link>
         <button className="sidebar-menu-body-log-out" onClick={handleLogOutUser}>

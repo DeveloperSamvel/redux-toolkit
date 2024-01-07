@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LoginPage from "./pages/Login/LoginPage";
-import HomePage from "./pages/Home/HomePage";
-import ServicesPage from "./pages/Services/ServicesPage";
+import HomePage from "./pages/AdminHome/AdminHomePage";
+import ServicesPage from "./pages/AdminServices/AdminServicesPage";
 import PageNotFound from "./pages/NotFound/PageNotFound";
 import ProtectedRoute from "./pages/ProtectedRoute";
 import useLogout from "./hooks/useLogout";
@@ -19,17 +19,6 @@ const App = () => {
     <Router>
       <Routes>
         <Route path="/" element={<ProtectedRoute />}>
-          <Route
-            index
-            element={
-              <HomePage
-                handleLogOutUser={handleLogOutUser}
-                open={open}
-                toggleDrawer={toggleDrawer}
-              />
-            }
-          />
-
           <Route path="login" element={<LoginPage />} />
           <Route
             path="services"
@@ -41,6 +30,29 @@ const App = () => {
               />
             }
           />
+          <Route path="admin/">
+            <Route
+              index
+              element={
+                <HomePage
+                  handleLogOutUser={handleLogOutUser}
+                  open={open}
+                  toggleDrawer={toggleDrawer}
+                />
+              }
+            />
+
+            <Route
+              path="services"
+              element={
+                <ServicesPage
+                  handleLogOutUser={handleLogOutUser}
+                  open={open}
+                  toggleDrawer={toggleDrawer}
+                />
+              }
+            />
+          </Route>
           {/* <Route path="services/:id" element={<ServicesPage />} /> */}
         </Route>
         <Route path="*" element={<PageNotFound />} />
