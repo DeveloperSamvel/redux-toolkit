@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LoginPage from "./pages/Login/LoginPage";
+import LoginPage from "./pages/GuestLogin/LoginPage";
 import HomePage from "./pages/AdminHome/AdminHomePage";
 import ServicesPage from "./pages/AdminServices/AdminServicesPage";
 import PageNotFound from "./pages/NotFound/PageNotFound";
